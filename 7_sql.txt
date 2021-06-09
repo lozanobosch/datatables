@@ -1,0 +1,54 @@
+Let ( [
+
+_ini="SELECT";
+_tabla=$tabla;
+_tabla=If ( PatternCount ( _tabla ; ">" ) ;Let ( [
+_rel=Substitute (_tabla;";";"¶");
+_tbls= Substitute ( GetValue(_rel;1);">"; " t INNER JOIN ") & " p ON ";
+_lk="t." & Substitute (GetValue(_rel;2);"="; " = p.");
+_r= _tbls & _lk
+]; _r )
+ ; _tabla );
+
+
+
+_campos=$campos;
+_campos=Substitute ( _campos ; "," ; ¶ );
+_r=
+
+While ( 
+[ 
+ 
+  _total = ValueCount ( _campos ); 
+  _resultado = ""; 
+  _contador = 0 
+] ;
+
+_contador < _total ; 
+
+[ 
+  _contador = _contador + 1 ;
+_campo=GetValue ( _campos ; _contador );
+  _resultado = _resultado & 
+Case ( 
+_contador=1; "
+'[\"' + " 
+& _campo & 
+" + '\",\"' +
+";
+_contador=_total; "'\"' + " &_campo  & " + '\"],'";
+_campo  & "  + '\",' + "
+ )
+
+
+] ; 
+
+_resultado
+
+ );
+_q= _ini  & " "  & _r  & " FROM " & _tabla  ;
+_datos= ExecuteSQL ( _q ; "" ; ""  );
+_datos=Left ( _datos ; Length ( _datos )-1 )
+
+]; "[" & _datos & "]"
+ )

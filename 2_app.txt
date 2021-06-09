@@ -1,0 +1,59 @@
+// DATA BEIGN INJECTED IN THE HEADER SCRIPT (BEFORE PARSING), SEE FMAPI BLOC
+
+$(document).ready( function() {
+	
+	var table = $('#ilaix').DataTable( 
+		{
+			data: datos, 
+               "dom": '<"top"f>rt<"bottom"ilp><"clear">',
+			select:true,
+	          lengthChange:false,
+			info:true,
+			autoWidth:false,
+			pagingType:"full_numbers",
+               language: {
+               searchPlaceholder: "Buscar registros",
+               search: "",
+             
+paginate: {
+        first:      "Primero",
+        last:       "Último",
+        next:       "Siguiente",
+        previous:   "Anterior"
+    },
+
+         },
+
+			columnDefs: [ {
+                	targets: ['_all'],
+                	className: 'you_cell_style'
+            		
+			}],
+			columns: [
+				{ title: "Nombre" },
+				{ title: "Apellidos" },
+				{ title: "Email" },
+			]
+		}
+
+
+	);
+
+	var envelope = $('#envelope');
+
+	table.on( 'select', function ( e, dt, type, indexes ) {
+			var rowData = table.rows( indexes ).data().toArray();
+			sendEvent(rowData );
+        } )
+
+      table.on( 'deselect', function ( e, dt, type, indexes ) {
+            var rowData = table.rows( indexes ).data().toArray();
+        } );
+
+
+	}
+
+
+);
+
+
