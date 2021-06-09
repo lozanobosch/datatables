@@ -1,2 +1,2 @@
-<script type="text/javascript" src="data:text/javascript;charset=utf-8;Base64, {{js}}"></script>;
-<link rel="stylesheet" href="data:text/css;charset=utf-8;Base64, {{css}}"></link>
+<script type="text/javascript" src="data:text/javascript;charset=utf-8;Base64, {{b64}}"></script>;
+<link rel="stylesheet" href="data:text/css;charset=utf-8;Base64, {{b64}}"></link>
