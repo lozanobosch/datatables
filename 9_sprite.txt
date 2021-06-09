@@ -1,0 +1,12 @@
+"data:text/html," & Substitute ( $template;
+
+		/* HEADER STUFF */
+		["{{NAME}}"; $nombre];
+		["{{CSS}}"; $css];
+		["{{COMMON}}"; $libs];
+		["{{FMAPI}}"; $fmapi];
+		["{{DATA}}"; $data];
+
+		/* BODY SCRIPT */
+		["{{SCRIPT}}"; $app]
+	)
