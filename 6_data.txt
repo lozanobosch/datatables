@@ -11,7 +11,7 @@
 ["Warman","Martin","warman@martin.com"],
 ["Mishkin","Jimenez","mishkin@jimenez.com"],
 ["Saine","Moreno","saine@moreno.com"],
-["Jodi","Hernandez","jodi@hernandez.com"],
+["Jodi","Hernández","jodi@hernandez.com"],
 ["Shaun","Muñoz","shaun@muñoz.com"],
 ["Grover","Diaz","grover@diaz.com"],
 ["Arellanes","Romero","arellanes@romero.com"],
