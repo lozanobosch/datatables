@@ -1,0 +1,2 @@
+https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css
+https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css
