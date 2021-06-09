@@ -15,9 +15,7 @@
 </head>
 <body>
 
-	<div id="envelope">
-		<table id="ilaix" class="display"></table>
-	</div>
+	<table id="ilaix" class="display"></table>
 
 	<script type="text/javascript">
 		{{SCRIPT}}

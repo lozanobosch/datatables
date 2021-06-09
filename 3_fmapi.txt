@@ -2,10 +2,10 @@ var datos = {{DATA}};
 
 function sendEvent(s) {
     try{
+        trace(s);
         FileMaker.PerformScript("fm_bridge", JSON.stringify(s));
     }catch(e){
-        trace("not in FM context executing call");
-        trace(s);
+        trace("executing call outside FM context");
     }  
 }
 var trace = function(s){
