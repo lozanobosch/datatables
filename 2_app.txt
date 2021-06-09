@@ -1,5 +1,3 @@
-// DATA BEIGN INJECTED IN THE HEADER SCRIPT (BEFORE PARSING), SEE FMAPI BLOC
-
 $(document).ready( function() {
 	
 	var table = $('#ilaix').DataTable( 
