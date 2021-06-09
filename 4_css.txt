@@ -3,13 +3,12 @@ html {
 	font-family: 'Source Code Pro', 'Verdana', monospace; 
 	font-size: 14px;
 	margin: 10px;
-
 }
 
 body {
 	max-width: 100%;
 }
 
-.you_cell_style{
+.you_cell_style {
 
 }
