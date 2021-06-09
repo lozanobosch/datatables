@@ -36,7 +36,6 @@ paginate: {
 			]
 		}
 
-
 	);
 
 	var envelope = $('#envelope');
@@ -52,7 +51,6 @@ paginate: {
 
 
 	}
-
 
 );
 
