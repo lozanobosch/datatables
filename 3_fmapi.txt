@@ -8,7 +8,6 @@ function sendEvent(s) {
         trace(s);
     }  
 }
-
 var trace = function(s){
 	console.log(s);
 }
