@@ -1,6 +1,6 @@
 html {
 	padding: 10px;
-	font-family: 'Source Code Pro', 'Verdana', monospace; 
+	font-family: 'Arial', 'Verdana', 'Sans Serif'; 
 	font-size: 14px;
 	margin: 10px;
 }
