@@ -10,8 +10,6 @@ _r= _tbls & _lk
 ]; _r )
  ; _tabla );
 
-
-
 _campos=$campos;
 _campos=Substitute ( _campos ; "," ; ¶ );
 _r=
