@@ -1,4 +1,5 @@
 Let ( [
+$$_JSONDATA="";
 _baseurl = "https://raw.githubusercontent.com/fsans/datatables/main/";
 
 _urls= List (
