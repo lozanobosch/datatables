@@ -1,0 +1,22 @@
+Let ( [
+_baseurl = "https://raw.githubusercontent.com/fsans/datatables/main/";
+
+_urls= List (
+	_baseurl & "1_template.txt";
+	_baseurl & "2_app.txt";
+	_baseurl & "3_fmapi.txt";
+	_baseurl & "4_css.txt";
+	_baseurl & "5_libs.txt";
+	_baseurl & "6_data.txt";
+	_baseurl & "9_sprite.txt"
+);
+$$_template=BE_HTTP_GET ( GetValue ( _urls ; 1 ));
+$$_app=BE_HTTP_GET ( GetValue ( _urls ; 2 ));
+$$_fmapi=BE_HTTP_GET ( GetValue ( _urls ; 3 ));
+$$_css=BE_HTTP_GET ( GetValue ( _urls ; 4 ));
+$$_libs=BE_HTTP_GET ( GetValue ( _urls ; 5 ));
+$$_data=BE_HTTP_GET ( GetValue ( _urls ; 6 ));
+_sprite=BE_HTTP_GET ( GetValue ( _urls ; 7 ));
+_beSprite=Substitute ( _sprite ; "$" ; "$$_" )
+
+]; Evaluate(_beSprite))
